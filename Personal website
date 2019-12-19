@@ -1,0 +1,550 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" class="dm-supports dm-passiveeventlisteners pointer skrollr skrollr-desktop"><head>
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style id="customRules"></style><script async="" src="//d1dxoqu0t5mb7j.cloudfront.net/sp-2.0.0-dm-0.1.min.js"></script><script type="text/javascript">
+    window._currentDevice = 'desktop';
+    window.Parameters = window.Parameters || {
+        AjaxContainer: 'div.dmBody',
+        WrappingContainer: 'div.dmOuter',
+        HomeUrl: 'https://www.randywait.com/',
+        AccountUUID: 'ec67f6f7a96244188e27982dd3aee63d',
+        SystemID: '1AND1_EU_PROD',
+        SiteAlias: 'caa38b0b7ce044faa92778971b0d2198',
+        SiteId: '377637',
+        SiteType: atob('RFVEQU9ORQ=='),
+        ExternalUid: 'a2377f3a-5d23-485e-ad0a-90808a19d835',
+        IsSiteMultilingual: false,
+        InitialPostAlias: '',
+        InitialDynamicItem: '',
+        InitialPageAlias: 'home',
+        InitialEncodedPageAlias: 'aG9tZQ==',
+        CurrentPageUrl: '',
+        IsCurrentHomePage: true,
+        AllowAjax: true,
+        AfterAjaxCommand: null,
+        HomeLinkText: 'Back To Home',
+        UseGalleryModule: false,
+        CurrentThemeName: 'Layout Theme',
+        ThemeVersion: '920',
+        DefaultPageAlias: '',
+        RemoveDID: true,
+        WidgetStyleID : null,
+        IsHeaderFixed: false,
+        IsHeaderSkinny: false,
+        IsBfs: true,
+        LayoutParams : {
+            _navigationAnimationStyle: 'slide',
+            _manifestId : 10600,
+            _device : 'desktop'
+        },
+        StorePageAlias: 'null',
+        StorePath: '',
+        StoreId: 'null',
+        StoreVersion: 0,
+        StoreBaseUrl: '',
+        StoreCleanUrl: true,
+        StoreDisableScrolling: true,
+        NotificationSubDomain: 'randywait',
+        HasCustomDomain: true,
+        showCookieNotification: true,
+        cookiesNotificationMarkup: ' <div>In order to provide you with the best online experience this website uses cookies. By using our website, you agree to our use of cookies. <a href=\"\/privacy?dm_device=desktop\" target=\"_blank\">More Info<\/a>.<\/div> \n',
+        translatedPageUrl: '',
+        isFastMigrationSite: false,
+        sidebarPosition: 'LEFT',
+        currentLanguage: 'en',
+        NavItems: 'W3sidGl0bGUiOiJIb21lIiwiYWxpYXMiOiJob21lIiwicGF0aCI6Ii8/ZG1fZGV2aWNlPWRlc2t0b3AiLCJpbk5hdmlnYXRpb24iOnRydWUsInN1Yk5hdiI6W119XQ==',
+        errors: {
+            general: 'There was an error connecting to the page.<br/> Make sure you are not offline.',
+            password: 'Incorrect name/password combination',
+            tryAgain: 'Try again'
+        },
+        NavigationAreaParams: {
+            ShowBackToHomeOnInnerPages: true,
+            NavbarSize: 4,
+            NavbarLiveHomePage: 'https://www.randywait.com/',
+            BlockContainerSelector: '.dmBody',
+            NavbarSelector: '#dmNav:has(a)',
+            SubNavbarSelector: '#subnav_main'
+        },
+        hasCustomCode: false,
+        planID: 2102
+    };
+
+    window.Parameters.LayoutID = {};
+    window.Parameters.LayoutID[window._currentDevice] = 6;
+    window.Parameters.LayoutVariationID = {};
+    window.Parameters.LayoutVariationID[window._currentDevice] = 5;
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ========= Meta Tags ========= -->
+<!-- PWA settings -->
+<script>
+    function toHash(str) {
+        var hash = 5381, i = str.length;
+        while (i) {
+            hash = hash * 33 ^ str.charCodeAt(--i)
+        }
+        return hash >>> 0
+    }
+
+    var cacheKey = '3~MODERN~1596011109~caa38b0b7ce044faa92778971b0d2198~1576686234000~1576686216000~home~~false~desktop~1576686234000';
+    var hashedCacheKey = cacheKey ? toHash(cacheKey) : '';
+</script>
+<script>
+    (function(global) {
+    const cacheKey = global.cacheKey;
+    const isOffline = 'onLine' in navigator && navigator.onLine === false;
+    const hasServiceWorkerSupport = 'serviceWorker' in navigator;
+    if (isOffline) {
+        console.log('offline mode');
+    }
+    if (!hasServiceWorkerSupport) {
+        console.log('service worker is not supported');
+    }
+    if (hasServiceWorkerSupport && !isOffline) {
+        window.addEventListener('load', function() {
+            const serviceWorkerPath = '/runtime-service-worker.js?v=2';
+            navigator.serviceWorker
+                .register(serviceWorkerPath, { scope: './' })
+                .then(
+                    function(registration) {
+                        // Registration was successful
+                        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                        // checkCacheKey().then(function(result) {
+                        //     if(result && result.newKey) {
+                        //         // stale version
+                        //         console.log('stale version, current key:', cacheKey, ';;; new key:', result.newKey);
+                        //         messageServiceWorker({ command: 'deletePagesCache'});
+                        //     }
+                        // });
+                    },
+                    function(err) {
+                        // registration failed :(
+                        console.log('ServiceWorker registration failed: ', err);
+                    }
+                )
+                .catch(function(err) {
+                    console.log(err);
+                });
+        });
+
+        // helper function to refresh the page
+        var refreshPage = (function() {
+            var refreshing;
+            return function() {
+                if (refreshing) return;
+                // prevent multiple refreshes
+                var refreshkey = 'refreshed' + location.href;
+                var prevRefresh = localStorage.getItem(refreshkey);
+                if (prevRefresh) {
+                    localStorage.removeItem(refreshkey);
+                    if (Date.now() - prevRefresh < 30000) {
+                        return; // dont go into a refresh loop
+                    }
+                }
+                refreshing = true;
+                localStorage.setItem(refreshkey, Date.now());
+                console.log('refereshing page');
+                window.location.reload();
+            };
+        })();
+
+        // checks the updated cache key
+        function checkCacheKey() {
+            var baseUrl = '/_dm/s/rt/actions/cacheKey';
+            const uri = location.pathname;
+            var cacheKeyUrl =
+                baseUrl + (baseUrl.indexOf('?') > -1 ? '&' : '?') + 'skip_sw_cache&uri=' + encodeURIComponent(uri);
+            return fetch(cacheKeyUrl)
+                .then(function(resp) {
+                    return resp && resp.json ? resp.json() : {};
+                })
+                .then(function(cacheObj) {
+                    if (cacheObj && cacheObj.value) {
+                        if (cacheObj.value !== cacheKey) {
+                            // stale version
+                            return { newKey: cacheObj.value };
+                        }
+                    }
+                })
+                .catch(function(err) {
+                    return {};
+                });
+        }
+
+        function messageServiceWorker(data) {
+            return new Promise(function(resolve, reject) {
+                if (navigator.serviceWorker.controller) {
+                    var worker = navigator.serviceWorker.controller;
+                    var messageChannel = new MessageChannel();
+                    messageChannel.port1.onmessage = replyHandler;
+                    worker.postMessage(data, [messageChannel.port2]);
+                    function replyHandler(event) {
+                        resolve(event.data);
+                    }
+                } else {
+                    resolve();
+                }
+            });
+        }
+    }
+})(window);
+</script>
+<!-- Add manifest -->
+<!-- End PWA settings -->
+
+
+<meta http-equiv="Content-type" content="text/html;charset=utf-8">
+<meta charset="utf-8">
+
+<link rel="canonical" href="https://www.randywait.com/">
+
+<meta id="view" name="viewport" content=", initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0, viewport-fit=cover">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Home
+</title>
+
+<!--Add favorites icons-->
+
+<link rel="icon" type="image/x-icon" href="/favicon_d1_res.ico">
+
+<!-- End favorite icons -->
+
+<link rel="preconnect" href="https://ssl.google-analytics.com" crossorigin="">
+
+
+
+<!-- render the required CSS and JS in the head section -->
+<script>
+    window.SystemID = '1AND1_EU_PROD';
+
+    if (!window.requestIdleCallback) {
+        window.requestIdleCallback = function (fn) {
+            setTimeout(fn, 0);
+        }
+    }
+
+    function loadCSS(link) {
+        try {
+            var urlParams = new URLSearchParams(window.location.search);
+            var noCSS = !!urlParams.get('nocss');
+            var cssTimeout = urlParams.get('cssTimeout') || 0;
+
+            if (noCSS) {
+                return;
+            }
+            requestIdleCallback(function () {
+                window.setTimeout(function () {
+                    link.onload = null;
+                    link.rel = 'stylesheet';
+                    link.type = 'text/css'
+                }, parseInt(cssTimeout, 10));
+            });
+        } catch (e) {/* Never fail - this is just a tool for measurements */}
+    }
+
+</script>
+<script>
+(function(n){"use strict";if(!n.l){n.l=function(){}}var o=loadCSS.t={};o.o=function(){var l;try{l=n.document.createElement("link").relList.supports("preload")}catch(e){l=false}return function(){return l}}();o.i=function(e){var l=e.media||"all";function enableStylesheet(){if(e.addEventListener){e.removeEventListener("load",enableStylesheet)}else if(e.attachEvent){e.detachEvent("onload",enableStylesheet)}e.setAttribute("onload",null);e.media=l}if(e.addEventListener){e.addEventListener("load",enableStylesheet)}else if(e.attachEvent){e.attachEvent("onload",enableStylesheet)}setTimeout(function(){e.rel="stylesheet";e.media="only x"});setTimeout(enableStylesheet,3e3)};o.s=function(){if(o.o()){return}var e=n.document.getElementsByTagName("link");for(var l=0;l<e.length;l++){var t=e[l];if(t.rel==="preload"&&t.getAttribute("as")==="style"&&!t.getAttribute("data-loadcss")){t.setAttribute("data-loadcss",true);o.i(t)}}};if(!o.o()){o.s();var e=n.setInterval(o.s,500);if(n.addEventListener){n.addEventListener("load",function(){o.s();n.clearInterval(e)})}else if(n.attachEvent){n.attachEvent("onload",function(){o.s();n.clearInterval(e)})}}if(typeof exports!=="undefined"){exports.l=loadCSS}else{n.l=loadCSS}})(typeof global!=="undefined"?global:this);
+</script>
+
+
+
+<style id="criticalCss">
+    @charset "UTF-8";html{font-family:Source Sans Pro;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}b{font-weight:700}hr{box-sizing:content-box;height:0}*,.dmPopup,:after,:before{box-sizing:border-box}img{border:0;max-width:100%;-ms-interpolation-mode:bicubic;display:inline-block}button{font-family:inherit;font-size:100%;margin:0;line-height:normal;text-transform:none;-webkit-appearance:button}button::-moz-focus-inner{border:0;padding:0}.dmRespRow.dmRespRowNoPadding{padding:0}.dmRespRow .dmRespRow:after,.dmRespRow .dmRespRow:before,.dmRespRow:after,.dmRespRow:before{content:" ";display:table}.dmRespRow .dmRespRow:after,.dmRespRow:after{clear:both}.dmRespRow,.dmRespRow .dmRespColsWrapper{max-width:960px;position:relative;margin:0 auto;width:100%}.dmRespRow .dmRespCol{position:relative;width:100%;display:inline-block;vertical-align:top;float:left}.dmRespRow .dmRespCol>*{max-width:100%}.dmRespRow .dmRespRow{width:auto;margin-top:0;margin-bottom:0;max-width:none}.dmDesktopBody .dmRespRow .large-2{position:relative;width:16.66667%}.dmDesktopBody .dmRespRow .large-6{position:relative;width:50%}.dmDesktopBody .dmRespRow .large-10{position:relative;width:83.33333%}.dmDesktopBody .dmRespRow .large-12{position:relative;width:100%}@font-face{font-family:Karla;font-style:italic;font-weight:400;font-display:swap;src:local('Karla Italic'),local('Karla-Italic'),url(https://fonts.gstatic.com/s/karla/v13/qkBVXvYC6trAT7RQHt6e4Q.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap}@font-face{font-family:Karla;font-style:normal;font-weight:400;font-display:swap;src:local('Karla'),local('Karla-Regular'),url(https://fonts.gstatic.com/s/karla/v13/qkBbXvYC6trAT7RVLtw.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap}@font-face{font-family:Karla;font-style:normal;font-weight:700;font-display:swap;src:local('Karla Bold'),local('Karla-Bold'),url(https://fonts.gstatic.com/s/karla/v13/qkBWXvYC6trAT7zuC8m5xLs.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap}@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:400;font-display:swap;src:local('Source Sans Pro Regular'),local('SourceSansPro-Regular'),url(https://fonts.gstatic.com/s/sourcesanspro/v13/6xK3dSBYKcSV-LCoeQqfX1RYOo3qOK7l.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap}@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:700;font-display:swap;src:local('Source Sans Pro Bold'),local('SourceSansPro-Bold'),url(https://fonts.gstatic.com/s/sourcesanspro/v13/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwlxdu.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap}#dm div.dmContent [class*=' icon-'],[class*=' icon-']{font-family:FontAwesome!important;font-weight:400;font-style:normal;text-decoration:inherit;-webkit-font-smoothing:antialiased}[class*=' icon-']:before{text-decoration:none;display:inline-block;speak:none}a [class*=' icon-']{display:inline}[class*=' icon-']{display:inline;width:auto;height:auto;line-height:normal;vertical-align:baseline;background-image:none;background-position:0 0;background-repeat:repeat;margin-top:0}.icon-angle-down:before{content:'\f107'}[class*=' dm-common-icons-']{speak:none;font-style:normal;font-weight:400;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-family:dm-common-icons!important}.dm-common-icons-close:before{content:'\e901'}.dmInner{min-height:100vh!important;position:relative}.dmRespRow:not(.dmPlaceHolderRespRow) .dmRespCol:not(.content-removed):empty,.titleLine hr{min-height:1px}.dmPopup,.dmPopupMask{position:fixed;left:0}.display_None{display:none}.dmDisplay_None{display:none!important}.clearfix:after{clear:both;visibility:hidden;line-height:0;height:0}.clearfix:after,.clearfix:before{content:' ';display:table}.clearfix{display:inline-block}.supportsFontIcons .hasFontIcon{background-image:none!important}#dm .dmNav.dmNavCustom .dmHideFromNav,#dm .dmn .dmHideFromNav{display:none!important}.dmPopupMask{margin:0;display:none;width:10px;z-index:1000000999;top:0}#dmRoot .dmPopup,.dmPopup{display:block}.dmPopup{padding:10px;text-align:left;margin:0 10px;top:10px;width:93%;z-index:1000009999!important;background:#f5f5f5;overflow-y:auto;height:100%}#dm .dmRespRow.dmRespRowNoPadding,.dmInner ul:not(.defaultList){padding:0}.dmPopup .dmPopupTitle{text-align:left;font:700 19px Helvetica,Arial;margin:20px 20px 35px;color:#999}#dmPopup{opacity:0}.dmPopupClose,.dmPopupClose:before{position:absolute;visibility:visible}#innerBar,#iscrollBody,#site_content,.dmHeader,.dmNav li{position:relative}.dmPopupClose{border-radius:25px;width:27px;height:27px;z-index:1;background-color:rgba(255,255,255,.4);top:12px;right:12px}.dmPopupClose:before{display:block;font-size:20px;color:#000;top:3px;right:3px}body.dmDesktopBody:not(.mac) .data::-webkit-scrollbar{width:5px;height:5px}#innerBar,.dmHeader,.imageWidget:not(.displayNone) img,body{width:100%}body.dmDesktopBody:not(.mac) .data::-webkit-scrollbar-track{background:rgba(0,0,0,.1)}body.dmDesktopBody:not(.mac) .data::-webkit-scrollbar-thumb{background:#c8c8c8;box-shadow:inset 0 1px 2px #454545;border-radius:45px}.lh-1{line-height:normal}#dm .dmRespRow .dmRespColsWrapper{display:-webkit-flex;display:flex}.pswp{display:none;z-index:9999999999!important}.align-center{margin-left:auto;margin-right:auto}body.fix-mobile-scrolling{overflow:initial}#dmRoot{text-decoration-skip-ink:none}body{-webkit-overflow-scrolling:touch;overflow:hidden;-webkit-text-size-adjust:100%!important;-ms-text-size-adjust:100%!important}.dmInner{min-width:768px!important;font-size:16px;background:#fff;color:#111}.imageWidget a{font-style:italic;text-align:center}.imageWidget a::after{content:attr(data-caption);display:block;height:100%;line-height:100%}*{border:0 solid #333;scrollbar-arrow-color:#fff;scrollbar-track-color:#F2F2F2;scrollbar-face-color:silver;scrollbar-highlight-color:silver;scrollbar-3dlight-color:silver;scrollbar-shadow-color:silver;scrollbar-darkshadow-color:silver;scrollbar-width:12px}A IMG{border:none}h2,ul{margin-left:0;margin-right:0}.dmInner *{-webkit-font-smoothing:antialiased}.clearfix,a,img,li,ul{vertical-align:top}.dmOuter{word-wrap:break-word}.dmDesktopBody .dmInner{min-width:960px}.dmInner a{color:#463939}.dmHeader{background:#fff;color:#111;text-align:center;max-width:100%}#innerBar{height:36px;font-size:20px;margin:0;z-index:80}.dmNav{margin-top:20px}.dmNav li a{height:100%;display:block;padding:17px 10px;text-decoration:none}.dmLargeBody .imageWidget:not(.displayNone){display:inline-block;max-width:100%}#dm .dmRespColsWrapper{display:block}.dmNewParagraph{text-align:left;margin:8px 0;padding:2px 0}.dmLargeBody .fHeader .dmRespRow .dmRespCol{padding-left:.75%;padding-right:.75%}.dmLargeBody .fHeader .dmRespRow .dmRespCol:first-child{padding-left:0;padding-right:1.5%}.dmLargeBody .fHeader .dmRespRow .dmRespCol:last-child{padding-right:0;padding-left:1.5%}.dmLargeBody .fHeader .dmRespRow .dmRespCol:only-child{padding-left:0;padding-right:0}#innerBar.lineInnerBar{display:table;width:100%;box-shadow:none;-webkit-box-shadow:none;-moz-box-shadow:none;font-size:20px;margin-top:30px;margin-bottom:30px;background-color:transparent;color:#111}#innerBar .titleLine{display:table-cell;vertical-align:middle;width:50%}.dmPageTitleRow:not(#innerBar){display:none}.titleLine hr{background-color:rgba(17,17,17,.2)}.dmStandardDesktop{display:block;margin:0 auto}.standardHeaderLayout .dmHeader{float:none;display:block;height:auto}.dmInner a{outline:0;vertical-align:inherit}#dm .dmDivider{display:block;margin:10px 0}body{background-color:#eee}.dmDivider{min-height:2px;border:currentColor;color:grey;background:0 0}#dm .dmDividerWrapper{display:block}.main-navigation.unifiednav .unifiednav__container .unifiednav__item:not(.unifiednav__item_has-sub-nav) .icon{display:none}.dmLargeBody .dmRespRow{width:100%;max-width:none;margin-left:0;margin-right:0;padding-left:40px;padding-right:40px}#dm .fHeader .dmHeaderContent.freeHeaderRow1{padding:30px 0}.dm-bfs.dm-layout-home div.dmInner{background-color:#fff}.dmStandardDesktop .dmHeader{background-color:#fff;max-width:100%}.dmRespRow{padding-top:25px;padding-bottom:25px}#dm div.dmRespCol>*{line-height:150%}#dm div.dmInner,#dm div.dmInner .dmRespCol{font-weight:400;color:rgba(82,82,82,1);font-family:Karla;font-size:14px}#dm DIV.dmOuter DIV.dmInner{background-color:rgba(255,255,255,1);background-image:url(https://cdn.website-editor.net/caa38b0b7ce044faa92778971b0d2198/dms3rep/multi/desktop/bg-white.png);background-size:cover;background-repeat:no-repeat;background-attachment:fixed;background-position:50% 50%}#dm .dmInner div.dmHeader,#dm .dmInner div.dmHeader.u_hcontainer,#dm .dmInner div.u_hcontainer{background-color:rgba(255,255,255,1)!important;border-style:solid!important;border-width:0!important}#dm .p_hfcontainer div.u_1571063569{background-color:rgba(42,40,40,1)!important}div.u_1252215454 hr{color:#383838!important;background:0 0!important;height:0!important;background-size:initial!important;min-height:0!important;border-color:currentColor!important;border-width:3px 1px 1px!important;border-top-style:solid!important}#dm .p_hfcontainer div.u_1571063569{float:none!important;top:0!important;left:0!important;width:100%!important;position:relative!important;height:auto!important;max-width:none!important;min-width:0!important;text-align:center!important;margin:0 auto!important;padding:40px 0 30px!important}#dm .p_hfcontainer div.u_1975128082,h2.u_1975817224{max-width:100%!important;min-width:0!important;text-align:center!important;float:none!important;top:0!important;left:0!important;position:relative!important;height:auto!important}#dm .p_hfcontainer div.u_1216302914{width:100px!important}#dm .p_hfcontainer div.u_1713311601{padding-left:0!important;padding-top:0!important}#dm .p_hfcontainer div.u_1549374048{padding:0!important}#dm .p_hfcontainer div.u_1975128082{width:auto!important;padding:8px 40px!important;margin:38px 0 0!important}h2.u_1975817224{display:block!important;width:100%!important;padding:2px 0!important}#dm .p_hfcontainer div.u_1252215454,div.u_1252215454{display:block!important;width:99px!important;padding:0!important}div.u_1252215454{float:none!important;top:0!important;left:0!important;position:relative!important;height:auto!important;max-width:calc(100% - 430px)!important;min-width:25px!important;text-align:center!important}#dm .p_hfcontainer div.u_1252215454,#dm .p_hfcontainer div.u_1396393982{float:none!important;top:0!important;left:0!important;position:relative!important;height:auto!important;max-width:100%!important;min-width:0!important;text-align:center!important}#dm .p_hfcontainer div.u_1252215454{margin:0 auto!important}#dm .p_hfcontainer div.u_1396393982{width:auto!important;padding:10px 40px!important;margin:0!important}.font-size-40{font-size:40px!important}:root{--button-color:#F66035;--button-hover-color:#F86F4C;--text-on-light:#F66035;--text-on-dark:#F66035;--text-on-button:#FFF;--header-color:#313131;--header-border-color:#222222;--header-text-color:#ffffff}#imageZone{position:absolute;margin:auto}.coloumns{border-radius:3px;background-color:#f9980d;height:18px;width:6px;-webkit-animation-name:loader;-webkit-animation-duration:1s;-webkit-animation-iteration-count:infinite;-webkit-animation-direction:linear;-moz-animation-name:loader;-moz-animation-duration:1s;-moz-animation-iteration-count:infinite;-moz-animation-direction:linear;opacity:.25;-webkit-transform:scale(.7);-webkit-transform-origin:50% 180%;-moz-transform:scale(.7);-moz-transform-origin:50% 180%;position:absolute}#coloumn1{-webkit-transform:rotate(0);-webkit-animation-delay:-.914s;-moz-transform:rotate(0);-moz-animation-delay:-.914s}#coloumn2{-webkit-transform:rotate(30deg);-webkit-animation-delay:-.831s;-moz-transform:rotate(30deg);-moz-animation-delay:-.831s}#coloumn3{-webkit-transform:rotate(60deg);-webkit-animation-delay:-.747s;-moz-transform:rotate(60deg);-moz-animation-delay:-.747s}#coloumn4{-webkit-transform:rotate(90deg);-webkit-animation-delay:-.664s;-moz-transform:rotate(90deg);-moz-animation-delay:-.664s}#coloumn5{-webkit-transform:rotate(120deg);-webkit-animation-delay:-.581s;-moz-transform:rotate(120deg);-moz-animation-delay:-.581s}#coloumn6{-webkit-transform:rotate(150deg);-webkit-animation-delay:-.498s;-moz-transform:rotate(150deg);-moz-animation-delay:-.498s}#coloumn7{-webkit-transform:rotate(180deg);-webkit-animation-delay:-.415s;-moz-transform:rotate(180deg);-moz-animation-delay:-.415s}#coloumn8{-webkit-transform:rotate(210deg);-webkit-animation-delay:-.332s;-moz-transform:rotate(210deg);-moz-animation-delay:-.332s}#coloumn9{-webkit-transform:rotate(240deg);-webkit-animation-delay:-.249s;-moz-transform:rotate(240deg);-moz-animation-delay:-.249s}#coloumn10{-webkit-transform:rotate(270deg);-webkit-animation-delay:-.166s;-moz-transform:rotate(270deg);-moz-animation-delay:-.166s}#coloumn11{-webkit-transform:rotate(300deg);-webkit-animation-delay:-83ms;-moz-transform:rotate(300deg);-moz-animation-delay:-83ms}#coloumn12{-webkit-transform:rotate(330deg);-moz-transform:rotate(330deg)}@-webkit-keyframes loader{0%{opacity:1}100%{opacity:.25}}@-moz-keyframes loader{0%{opacity:1}100%{opacity:.25}}
+    .dmDesktopBody [data-anim-desktop]:not([data-anim-desktop='none']) {
+        visibility: hidden;
+    }
+
+    
+</style>
+
+
+
+<!-- End render the required css and JS in the head section -->
+
+
+
+
+
+
+
+
+
+  <link type="application/rss+xml" rel="alternate" href="https://www.randywait.com/feed/rss2">
+  <link type="application/atom+xml" rel="alternate" href="https://www.randywait.com/feed/atom">
+
+  <meta name="twitter:card" content="summary">
+
+
+
+
+
+<!-- SYS- MUFORDFfRVVfUFJPRA== -->
+
+<script src="https://integration.mywebsite-editor.com/dakota-snippet-service/snippet/integration/snippet.js?sitename=caa38b0b7ce044faa92778971b0d2198&amp;external_uid=a2377f3a-5d23-485e-ad0a-90808a19d835&amp;mode=visit"></script><script src="//integration.mywebsite-editor.com/dakota-snippet-service/snippet/integration/js/perfbar.js" type="text/javascript"></script><script src="//tif.webjavaskript.net/js/22728.js" type="text/javascript"></script></head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body id="dmRoot" class="supportsFontIcons supportsFontIcons dmRoot dmDesktopBody fix-mobile-scrolling dmResellerSite dmLargeBody  pcCustomScrollbar d1SiteBody dmBodyNoIscroll fullyLoaded" style="padding:0;margin:0;">
+        <div id="disabledImageZone" style="display:none;z-index:-1">
+            <style type="text/css">
+                #imageZone {
+                    position: absolute;
+                    margin: auto;
+                }
+
+                .coloumns {
+                    border-radius: 3px;
+                    background-color: rgb(249, 152, 13); /*border:1px solid #999;*/
+                    height: 18px;
+                    width: 6px;
+                    -webkit-animation-name: loader;
+                    -webkit-animation-duration: 1s;
+                    -webkit-animation-iteration-count: infinite;
+                    -webkit-animation-direction: linear;
+                    -moz-animation-name: loader;
+                    -moz-animation-duration: 1s;
+                    -moz-animation-iteration-count: infinite;
+                    -moz-animation-direction: linear;
+                    opacity: .25;
+                    -webkit-transform: scale(0.7);
+                    -webkit-transform-origin: 50% 180%;
+                    -moz-transform: scale(0.7);
+                    -moz-transform-origin: 50% 180%;
+                    position: absolute;
+                }
+
+                #coloumn1 {
+                    -webkit-transform: rotate(0deg);
+                    -webkit-animation-delay: -.914s;
+                    -moz-transform: rotate(0deg);
+                    -moz-animation-delay: -.914s;
+                }
+
+                #coloumn2 {
+                    -webkit-transform: rotate(30deg);
+                    -webkit-animation-delay: -.831s;
+                    -moz-transform: rotate(30deg);
+                    -moz-animation-delay: -.831s;
+                }
+
+                #coloumn3 {
+                    -webkit-transform: rotate(60deg);
+                    -webkit-animation-delay: -.747s;
+                    -moz-transform: rotate(60deg);
+                    -moz-animation-delay: -.747s;
+                }
+
+                #coloumn4 {
+                    -webkit-transform: rotate(90deg);
+                    -webkit-animation-delay: -.664s;
+                    -moz-transform: rotate(90deg);
+                    -moz-animation-delay: -.664s;
+                }
+
+                #coloumn5 {
+                    -webkit-transform: rotate(120deg);
+                    -webkit-animation-delay: -.581s;
+                    -moz-transform: rotate(120deg);
+                    -moz-animation-delay: -.581s;
+                }
+
+                #coloumn6 {
+                    -webkit-transform: rotate(150deg);
+                    -webkit-animation-delay: -.498s;
+                    -moz-transform: rotate(150deg);
+                    -moz-animation-delay: -.498s;
+                }
+
+                #coloumn7 {
+                    -webkit-transform: rotate(180deg);
+                    -webkit-animation-delay: -.415s;
+                    -moz-transform: rotate(180deg);
+                    -moz-animation-delay: -.415s;
+                }
+
+                #coloumn8 {
+                    -webkit-transform: rotate(210deg);
+                    -webkit-animation-delay: -.332s;
+                    -moz-transform: rotate(210deg);
+                    -moz-animation-delay: -.332s;
+                }
+
+                #coloumn9 {
+                    -webkit-transform: rotate(240deg);
+                    -webkit-animation-delay: -.249s;
+                    -moz-transform: rotate(240deg);
+                    -moz-animation-delay: -.249s;
+                }
+
+                #coloumn10 {
+                    -webkit-transform: rotate(270deg);
+                    -webkit-animation-delay: -.166s;
+                    -moz-transform: rotate(270deg);
+                    -moz-animation-delay: -.166s;
+                }
+
+                #coloumn11 {
+                    -webkit-transform: rotate(300deg);
+                    -webkit-animation-delay: -.083s;
+                    -moz-transform: rotate(300deg);
+                    -moz-animation-delay: -.083s;
+                }
+
+                #coloumn12 {
+                    -webkit-transform: rotate(330deg);
+                    -moz-transform: rotate(330deg);
+                }
+
+                @-webkit-keyframes loader {
+                    0% {
+                        opacity: 1;
+                    }
+                    100% {
+                        opacity: .25;
+                    }
+                }
+
+                @-moz-keyframes loader {
+                    0% {
+                        opacity: 1;
+                    }
+                    100% {
+                        opacity: .25;
+                    }
+                }
+            </style>
+            <div id="imageZone">
+                <div id="coloumn1" class="coloumns"></div>
+                <div id="coloumn2" class="coloumns"></div>
+                <div id="coloumn3" class="coloumns"></div>
+                <div id="coloumn4" class="coloumns"></div>
+                <div id="coloumn5" class="coloumns"></div>
+                <div id="coloumn6" class="coloumns"></div>
+                <div id="coloumn7" class="coloumns"></div>
+                <div id="coloumn8" class="coloumns"></div>
+                <div id="coloumn9" class="coloumns"></div>
+                <div id="coloumn10" class="coloumns"></div>
+                <div id="coloumn11" class="coloumns"></div>
+                <div id="coloumn12" class="coloumns"></div>
+            </div>
+        </div>
+
+        <!-- ========= Site Content ========= -->
+        <div id="dm" class="dmwr">
+            
+            <div class="dm_wrapper standard-var5 widgetStyle-3 standard">
+                 <div dmwrapped="true" id="1099890496"> <div dmtemplateid="StandardLayoutMultiD" class="standardHeaderLayout dm-bfs dm-layout-home dm-single-page-nav hasAnimations dmPageBody dmFreeHeader d-page-1348656857 runtime-module-container" id="dm-outer-wrapper" data-page-class="1348656857" data-buttonstyle="THICK_BORDER_ROUND" data-soch="true" data-background-size="cover" data-background-attachment="fixed" data-background-repeat="no-repeat" data-background-position="50% 0%" data-background-hide-inner="true" data-background-fullbleed="false" data-background-parallax-selector=".dmSectionParallex" data-background-parallax-speed="0.2"> <div id="dmStyle_outerContainer" class="dmOuter"> <div id="dmStyle_innerContainer" class="dmInner" style="min-height: 770px;"> <div class="dmLayoutWrapper standard-var dmStandardDesktop"> <ul class="dmn dmLayoutNav hiddenNavPlaceHolder navPlaceHolder dmDisplay_None"></ul> 
+ <div> <div id="iscrollBody"> <div id="site_content"> <div class="dmHeaderContainer fHeader d-header-wrapper"> <div id="hcontainer" class="dmHeader p_hfcontainer u_hcontainer" freeheader="true"> <div dm:templateorder="85" class="dmHeaderResp dmHeaderStack noSwitch" id="1709005236"> <div class="u_1571063569 dmRespRow dmHeaderContent freeHeaderRow1" id="1571063569"> <div class="dmRespColsWrapper clearfix" id="1618005341"> <div class="u_1639054215 dmRespCol small-12 large-2 medium-2" id="1639054215"> <div class="imageWidget align-center u_1216302914" editablewidget="true" data-element-type="image" data-widget-type="image" id="1216302914"> <a href="/home-old" id="1301666193" dm_dont_rewrite_url="false" file="false"><img src="https://cdn.website-editor.net/caa38b0b7ce044faa92778971b0d2198/dms3rep/multi/thumbnail/11112318_418979228288452_4332908495026795601_o+%282%29.jpg" id="1969036441" class="" data-dm-image-path="https://cdn.website-editor.net/caa38b0b7ce044faa92778971b0d2198/dms3rep/multi/11112318_418979228288452_4332908495026795601_o+%282%29.jpg" onerror="handleImageLoadError(this)"></a> 
+</div> 
+</div> 
+ <div class="u_1713311601 dmRespCol small-12 large-10 medium-10" id="1713311601"> <div class="dmNewParagraph" data-dmtmpl="true" data-element-type="paragraph" id="1813596792" style="transition: opacity 1s ease-in-out 0s;"><font style="color: rgb(255, 255, 255);">Randy Wait</font></div> <div class="u_1975128082 dmRespRow" id="1975128082"> <div class="dmRespColsWrapper" id="1991728899"> <div class="dmRespCol large-6 medium-6 small-12" id="1821747707"> <div class="dmNewParagraph" data-dmtmpl="true" data-element-type="paragraph" id="1431419579" style="transition: opacity 1s ease-in-out 0s;" data-uialign="left"><span style="color: rgb(255, 255, 255);">Welcome to my personal website.  Here you will find out a bit more about me, including both my business experience and my personal interests.  Thanks for stopping by!</span></div></div> 
+ <div class="u_1549374048 dmRespCol small-12 large-6 medium-6" id="1549374048"></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="u_1396393982 dmRespRow" id="1396393982"> <div class="dmRespColsWrapper" id="1749220580"> <div class="dmRespCol large-12 medium-12 small-12" id="1789968140"> <h2 class="dmNewParagraph u_1975817224" id="1975817224" style="transition: opacity 1s ease-in-out;" data-uialign="center" data-element-type="paragraph"><div><span style="" class=" lh-1"><font style="color: rgb(56, 56, 56);"><span style="font-weight: 500;" class="m-font-size-36 lh-1 font-size-40">Business Experience</span></font></span></div><font></font></h2> <div class="u_1252215454 dmDividerWrapper clearfix" id="1252215454" layout="divider-style-1" data-element-type="dDividerId" data-widget-version="2"><hr class="dmDivider" style="min-height: 2px; border:none; background:grey" id="1043070903"></div> 
+ <div class="dmNewParagraph" data-dmtmpl="true" data-element-type="paragraph" id="1783508365" style="transition: opacity 1s ease-in-out 0s;" data-uialign="center"><div>My business experience spans multiple corporate functions including Sales and Client Management, Business Development, Multi-Channel &amp; Digital Marketing, Operations, Legal, and M&amp;A.&nbsp; Below is a summary of my experience by functional area:</div><div><br></div><div><div><b>Start-up's:</b> 
+Second employee at Leapfrog Online and participated in its growth to approximately 130 full-time employees. In 2017 Leapfrog was purchased by iProspect, a subsidiary of Dentsu Inc.&nbsp;</div><div><br></div><div><b>Sales &amp; Client Management:</b> 
+Managed, hired, and mentored Client Services and Marketing teams. Exponentially grew the number of clients serviced as well as customer acquisition programs.&nbsp;</div><div><br></div><div><b>Operations:</b> 
+Oversaw multiple facility locations including negotiating multi-year leases, build-outs, and sublets.  Ensured Office Operations were maximized to enhance employee satisfaction while keeping costs aligned with budgeted expenses.&nbsp; Sourced, evaluated, and negotiated agreements with BPO suppliers.&nbsp;&nbsp;</div><div><br></div><div><b>Legal:</b> 
+Managed Legal processes and the use of outside counsel.&nbsp;</div><div><br></div><div><b>M&amp;A:</b> 
+Managed the use of all documents in Leapfrog Online's electronic library.  Assessed and identified potential acquisition targets and participated in due diligence.&nbsp;</div><div><br></div><div><b>Board's:</b> 
+Leapfrog  Online: Corporate Secretary</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Chicago Association of Direct Marketing (www.cadm.org) - Board Member&nbsp;</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Mudlark Theater (www.mudlarktheater.org) - Board Member</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Have Dreams (www.havedreams.org) - Board Member</div><div><br></div><div><b>Event Management:</b> 
+Founded the Evanston Motorcycle Classic.  The event has been held in 2017, 2018, and 2019.</div><div><br></div><div><b>Teaching:</b> 
+Taught the Interactive Marketing module of the CADM Basic Course for 6 years.&nbsp;&nbsp;</div><div><br></div><div><b>Education:</b> 
+Attended the University of Colorado at Colorado Springs, CO for both my undergraduate and graduate degrees.&nbsp; I have a Bachelor of Science degree in Marketing and an MBA in Finance, with an emphasis in Strategy.</div><div><br></div><div><b>Passions:</b> 
+In business - developing and executing successful strategies and programs for business growth&nbsp;</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; In life – travel and experiencing new cultures, maintaining and riding/driving classic cars and&nbsp;</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;motorcycles.&nbsp; I founded the Evanston MotorCycle Classic in 2017....more details on this event are further below.</div></div></div></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="dmRespRow dmRespRowStable dmRespRowNoPadding dmPageTitleRow "> <div class="dmRespColsWrapper"> <div class="large-12 dmRespCol"> <div id="innerBar" class="innerBar lineInnerBar dmDisplay_None"> <div class="titleLine display_None"><hr></div> 
+<!-- Page title is hidden in css for new responsive sites. It is left here only so we don't break old sites. Don't copy it to new layouts --> <div id="pageTitleText"></div> 
+ <div class="titleLine display_None"><hr></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div dmwrapped="true" id="dmTempContainer" class="dmBody u_dmStyle_template_home" style="transition: opacity 0.4s cubic-bezier(0.1, 0.1, 0.25, 0.9) 0s; width: 1351px; height: 770px; position: absolute; top: 0px; display: none;"></div><div dmwrapped="true" id="dmFirstContainer" class="dmBody u_dmStyle_template_home" style="transition: opacity 0.4s cubic-bezier(0.1, 0.1, 0.25, 0.9) 0s;"> <div id="allWrapper" class="allWrapper"><!-- navigation placeholders --> <div id="dm_content" class="dmContent"> <div dm:templateorder="100" class="dmAboutusRespTmpl mainBorder" id="1348656857"> <div class="innerPageTmplBox dmRespRowsWrapper dmRespRowsWrapperSize1" id="1910325976"> <div class="u_1691594795 dmRespRow fullBleedChanged fullBleedMode" style="text-align: center;" id="1691594795"> <div class="dmRespColsWrapper" id="1607685190"> <div class="dmRespCol small-12 medium-12 large-12" id="1031559640"> <div class="dmSpacer u_1004397914" id="1004397914" data-element-type="spacer"></div> 
+</div> 
